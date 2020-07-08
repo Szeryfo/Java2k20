@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:kdpw:xsd:trar.sts.001.04" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UnqTradIdr">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="E022594008YSYXYOTBSQL93259400VVMM70CQRE200619NG00007"/>
+        <xs:enumeration value="E022594008YSYXYOTBSQL93259400VVMM70CQRE200619NG00006"/>
+        <xs:enumeration value="E022594008YSYXYOTBSQL93259400VVMM70CQRE200619NG00005"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="RptgCtrPtyId" type="xs:string"/>
+  <xs:element name="OthrCtrPtyId" type="xs:string"/>
+  <xs:element name="PrvsSndrMsgRef">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="mro_12910"/>
+        <xs:enumeration value="mro_12911"/>
+        <xs:enumeration value="mro_12912"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="TradRefId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:UnqTradIdr" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:RptgCtrPtyId" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:OthrCtrPtyId" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SndrMsgRef">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="A1__K6MEnQ000000"/>
+        <xs:enumeration value="A1__K6MEnQ000001"/>
+        <xs:enumeration value="A1__K6MEnQ000002"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ActnTp" type="xs:string"/>
+  <xs:element name="Lvl" type="xs:string"/>
+  <xs:element name="RepTmStmp">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="2020-06-22T12:37:36Z"/>
+        <xs:enumeration value="2020-06-22T12:37:42Z"/>
+        <xs:enumeration value="2020-06-22T12:37:47Z"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Lnk">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:PrvsSndrMsgRef" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:TradRefId" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StsCd" type="xs:string"/>
+  <xs:element name="LEI">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="2594008YSYXYOTBSQL93"/>
+        <xs:enumeration value="259400VVMM70CQREJT74"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Id">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:LEI" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ctry" type="xs:string"/>
+  <xs:element name="EMIROblgtn" type="xs:string"/>
+  <xs:element name="CtrPtySd" type="xs:string"/>
+  <xs:element name="Sctr" type="xs:string"/>
+  <xs:element name="Ntr" type="xs:string"/>
+  <xs:element name="Bnfcry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:LEI" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradgCpcty" type="xs:string"/>
+  <xs:element name="CmmrclActvty" type="xs:string"/>
+  <xs:element name="ClrTrshld" type="xs:string"/>
+  <xs:element name="OthrCtrPty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:Id" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Ctry" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:EMIROblgtn" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CtrPty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:RptgCtrPtyId" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:CtrPtySd" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Sctr" maxOccurs="unbounded" minOccurs="0" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Ntr" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Bnfcry" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:TradgCpcty" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:CmmrclActvty" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:ClrTrshld" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:OthrCtrPty" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClssfctnFinInstrm" type="xs:string"/>
+  <xs:element name="PdctClssfctn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:ClssfctnFinInstrm" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NtnlCcyFrstLeg" type="xs:string"/>
+  <xs:element name="CtrctTp" type="xs:string"/>
+  <xs:element name="AsstClss" type="xs:string"/>
+  <xs:element name="CtrctDtls">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:PdctClssfctn" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:NtnlCcyFrstLeg" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MntryVal">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="Ccy" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tp" type="xs:string"/>
+  <xs:element name="TmStmp" type="xs:string"/>
+  <xs:element name="ClrOblgtn" type="xs:string"/>
+  <xs:element name="Clrd" type="xs:string"/>
+  <xs:element name="IntraGrp" type="xs:string"/>
+  <xs:element name="FrDtTm">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="2021-01-01T05:00:00Z"/>
+        <xs:enumeration value="2020-07-01T04:00:00Z"/>
+        <xs:enumeration value="2020-10-01T04:00:00Z"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ToDtTm">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="2021-04-01T03:59:59Z"/>
+        <xs:enumeration value="2020-08-01T03:59:59Z"/>
+        <xs:enumeration value="2021-01-01T04:59:59Z"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DlvryIntrvl">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="05:00:00Z"/>
+        <xs:enumeration value="04:00:00Z"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DlvryPrd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:FrDtTm" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:ToDtTm" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Drtn">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Q"/>
+        <xs:enumeration value="M"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="WkDay">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="WD"/>
+        <xs:enumeration value="WN"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DlvryCpcty">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="5"/>
+        <xs:enumeration value="14"/>
+        <xs:enumeration value="3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="QtyUnit" type="xs:string"/>
+  <xs:element name="PricTmIntrvlQty">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="12.2125"/>
+        <xs:enumeration value="5.575"/>
+        <xs:enumeration value="10.4375"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="CmmdtyBase" type="xs:string"/>
+  <xs:element name="CmmdtyDtls" type="xs:string"/>
+  <xs:element name="DlvryPtOrZone" type="xs:string"/>
+  <xs:element name="IntrCnnctnPt" type="xs:string"/>
+  <xs:element name="LdTp" type="xs:string"/>
+  <xs:element name="DlvryAttr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:DlvryIntrvl" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:DlvryPrd" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Drtn" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:WkDay" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:DlvryCpcty" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:QtyUnit" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:PricTmIntrvlQty" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradgVn" type="xs:string"/>
+  <xs:element name="Cmprssn" type="xs:string"/>
+  <xs:element name="Pric">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:MntryVal" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NtnlAmt">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="131833.94"/>
+        <xs:enumeration value="58069.2"/>
+        <xs:enumeration value="69169.31"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="PricMltplr" type="xs:string"/>
+  <xs:element name="Qty">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="5"/>
+        <xs:enumeration value="14"/>
+        <xs:enumeration value="3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="DlvryTp" type="xs:string"/>
+  <xs:element name="ExctnDtTm" type="xs:string"/>
+  <xs:element name="FctvDt" type="xs:string"/>
+  <xs:element name="TradConf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:Tp" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:TmStmp" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradClr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:ClrOblgtn" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Clrd" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:IntraGrp" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cmmdty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:CmmdtyBase" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:CmmdtyDtls" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:DlvryPtOrZone" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:IntrCnnctnPt" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:LdTp" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:DlvryAttr" maxOccurs="unbounded" minOccurs="0" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CtrctData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:CtrctTp" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:AsstClss" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:CtrctDtls" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TxData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:UnqTradIdr" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:TradgVn" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Cmprssn" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Pric" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:NtnlAmt" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:PricMltplr" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Qty" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:DlvryTp" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:ExctnDtTm" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:FctvDt" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:TradConf" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:TradClr" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Cmmdty" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CtrPtySpcfcData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:CtrPty" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CmonTradData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:CtrctData" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:TxData" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GnlInf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:SndrMsgRef" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:ActnTp" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Lvl" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:RepTmStmp" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Lnk" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:StsCd" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RptDtls">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:CtrPtySpcfcData" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:CmonTradData" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="trar.sts.001.04">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:GnlInf" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:Sts" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+        <xs:element ref="urn:RptDtls" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KDPWDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:trar.sts.001.04" maxOccurs="unbounded" minOccurs="0" xmlns:urn="urn:kdpw:xsd:trar.sts.001.04"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="Sndr"/>
+      <xs:attribute type="xs:string" name="Rcvr"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
