@@ -1,7 +1,7 @@
 
 package com.example.demo.Parse;
 
-import com.example.demo.model.*;
+import com.example.demo.Model.TrarSts00203.*;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;

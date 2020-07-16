@@ -1,10 +1,6 @@
 package com.example.demo.Parse;
 
 
-import com.example.demo.model.KDPWDocument;
-import com.example.demo.model.trar2.KDPWDocument1;
-import com.example.demo.repository.KDPWDocumentRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.multipart.MultipartFile;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -42,8 +38,8 @@ public class Converter {
         Document document = documentBuilder.parse(file);
         Element element = document.getDocumentElement();
 
-        stringObjectMap.put("urn:kdpw:xsd:trar.sts.003.02", new KDPWDocument1());
-        stringObjectMap.put("urn:kdpw:xsd:trar.sts.002.03", new KDPWDocument());
+        stringObjectMap.put("urn:kdpw:xsd:trar.sts.003.02", new com.example.demo.Model.TrarSts00302.KDPWDocument());
+        stringObjectMap.put("urn:kdpw:xsd:trar.sts.002.03", new com.example.demo.Model.TrarSts00203.KDPWDocument());
 
         return stringObjectMap.get(element.getAttribute("xmlns"));
     }

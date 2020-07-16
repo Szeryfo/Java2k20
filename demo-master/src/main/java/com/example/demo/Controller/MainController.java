@@ -3,11 +3,6 @@ package com.example.demo.Controller;
 import com.example.demo.Parse.Converter;
 
 import com.example.demo.StrategyPattern.SaveToDbStrategy;
-import com.example.demo.model.KDPWDocument;
-import com.example.demo.model.trar2.KDPWDocument1;
-import com.example.demo.repository.KDPWDocument1Repository;
-import com.example.demo.repository.KDPWDocumentRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,7 +31,7 @@ public class MainController {
         Object kdpwDocument = converter.xmlUnmarshall(file,o);
         converter.xmlMarshall(kdpwDocument,o);
 
-        SaveToDbStrategy saveToDbStrategy = saveToDbStrategyMap.get(kdpwDocument.getClass().getSimpleName());
+        SaveToDbStrategy saveToDbStrategy = saveToDbStrategyMap.get(kdpwDocument.getClass().getName());
         saveToDbStrategy.saveToDb(kdpwDocument);
         return ResponseEntity.status(HttpStatus.OK).body(kdpwDocument);
     }
