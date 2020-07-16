@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:kdpw:xsd:trar.sts.002.03" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PrvsSndrMsgRef">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="PrvsSndrMsgRef1"/>
+        <xs:enumeration value="PrvsSndrMsgRef2"/>
+        <xs:enumeration value="PrvsSndrMsgRef3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="SndrMsgRef">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="SndrMsgRef1"/>
+        <xs:enumeration value="SndrMsgRef2"/>
+        <xs:enumeration value="SndrMsgRef3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="RepTmStmp">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="1900-01-01T01:01:01+01:00"/>
+        <xs:enumeration value="0001-01-03T00:00:00+01:00"/>
+        <xs:enumeration value="9999-12-31T23:59:59.999+01:00"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="ActnTp">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="1"/>
+        <xs:enumeration value="2"/>
+        <xs:enumeration value="3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="EligDt">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="1900-01-01+01:00"/>
+        <xs:enumeration value="0001-01-03+01:00"/>
+        <xs:enumeration value="9999-12-31+01:00"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Lnk">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:PrvsSndrMsgRef" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RsnCd">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Rsn1"/>
+        <xs:enumeration value="Rsn2"/>
+        <xs:enumeration value="Rsn3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="RsnTxt">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="RsnTxt1"/>
+        <xs:enumeration value="RsnTxt2"/>
+        <xs:enumeration value="RsnTxt3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="StsCd">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Sts1"/>
+        <xs:enumeration value="Sts2"/>
+        <xs:enumeration value="Sts3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Rsn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:RsnCd" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+        <xs:element ref="urn:RsnTxt" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GnlInf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:SndrMsgRef" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+        <xs:element ref="urn:RepTmStmp" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+        <xs:element ref="urn:ActnTp" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+        <xs:element ref="urn:EligDt" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+        <xs:element ref="urn:Lnk" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:StsCd" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+        <xs:element ref="urn:Rsn" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="trar.sts.002.03">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:GnlInf" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+        <xs:element ref="urn:Sts" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KDPWDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="urn:trar.sts.002.03" maxOccurs="unbounded" minOccurs="0" xmlns:urn="urn:kdpw:xsd:trar.sts.002.03"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="Sndr"/>
+      <xs:attribute type="xs:string" name="Rcvr"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
