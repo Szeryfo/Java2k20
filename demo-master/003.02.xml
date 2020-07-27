@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<KDPWDocument xmlns="urn:kdpw:xsd:trar.sts.003.02" Sndr="Snd1" Rcvr="Rcv1" >
+<KDPWDocument xmlns="urn:kdpw:xsd:trar.sts.003.02" Sndr="Snd1" Rcvr="Rcv1">
   <trar.sts.003.02>
     <GnlInf>
-      <RptgNtty>RptgNtty1</RptgNtty>
+      <RptgNtty>RPTGNTTYASDFGHJKLM12</RptgNtty>
       <SndrMsgRef>SndrMsgRef1</SndrMsgRef>
       <ActnTp>1</ActnTp>
       <Lvl>1</Lvl>
@@ -10,14 +10,14 @@
       <Lnk>
         <PrvsSndrMsgRef>PrvsSndrMsgRef1</PrvsSndrMsgRef>
         <TradRefId>
-          <UnqTradIdr>UnqTradIdr1</UnqTradIdr>
-          <RptgCtrPtyId>RptgCtrPtyId1</RptgCtrPtyId>
-          <OthrCtrPtyId>OthrCtrPtyId1</OthrCtrPtyId>
+          <UnqTradIdr>U1</UnqTradIdr>
+          <RptgCtrPtyId>RPTGNTTYASDFGHJKID12</RptgCtrPtyId>
+          <OthrCtrPtyId>OID1</OthrCtrPtyId>
         </TradRefId>
         <TradRefId>
-          <UnqTradIdr>UnqTradIdr2</UnqTradIdr>
-          <RptgCtrPtyId>RptgCtrPtyId2</RptgCtrPtyId>
-          <OthrCtrPtyId>OthrCtrPtyId2</OthrCtrPtyId>
+          <UnqTradIdr>U2</UnqTradIdr>
+          <RptgCtrPtyId>RPTGNTTYASDFGHJKID13</RptgCtrPtyId>
+          <OthrCtrPtyId>OID2</OthrCtrPtyId>
         </TradRefId>
       </Lnk>
     </GnlInf>
@@ -25,25 +25,133 @@
       <EligDt>1900-01-01</EligDt>
       <RglntInd>E</RglntInd>
       <CtrPty>
-        <RptgCtrPtyId>RptgCtrPtyId1</RptgCtrPtyId>
+        <RptgCtrPtyId>RPTGNTTYASDFGHJKID14</RptgCtrPtyId>
         <CtrPtySd>S</CtrPtySd>
         <OthrCtrPty>
           <Id>
-            <LEI>LEI1</LEI>
+            <LEI>LEIASDCVBGFGRFDXSE21</LEI>
           </Id>
         </OthrCtrPty>
       </CtrPty>
       <CtrPty>
-        <RptgCtrPtyId>RptgCtrPtyId2</RptgCtrPtyId>
+        <RptgCtrPtyId>RPTGNTTYASDFGHJKID14</RptgCtrPtyId>
         <CtrPtySd>B</CtrPtySd>
         <OthrCtrPty>
           <Id>
-            <LEI>LEI2</LEI>
+            <LEI>LEIASDCVBGFGRFDXSE22</LEI>
           </Id>
         </OthrCtrPty>
       </CtrPty>
       <TxData>
-        <UnqTradIdr>UnqTradIdr1</UnqTradIdr>
+        <UnqTradIdr>U1</UnqTradIdr>
+      </TxData>
+    </RptDtls>
+    <Sts>
+      <StsCd>Sts1</StsCd>
+      <Rsn>
+        <RsnCd>Rsn1</RsnCd>
+        <RsnTxt>RsnTxt1</RsnTxt>
+      </Rsn>
+    </Sts>
+  </trar.sts.003.02>
+  <trar.sts.003.02>
+    <GnlInf>
+      <RptgNtty>RPTGNTTYASDFGHJKLM12</RptgNtty>
+      <SndrMsgRef>SndrMsgRef1</SndrMsgRef>
+      <ActnTp>1</ActnTp>
+      <Lvl>1</Lvl>
+      <RepTmStmp>1900-01-01T01:01:01+01:00</RepTmStmp>
+      <Lnk>
+        <PrvsSndrMsgRef>PrvsSndrMsgRef3</PrvsSndrMsgRef>
+        <TradRefId>
+          <UnqTradIdr>U1</UnqTradIdr>
+          <RptgCtrPtyId>RPTGNTTYASDFGHJKID16</RptgCtrPtyId>
+          <OthrCtrPtyId>OID1</OthrCtrPtyId>
+        </TradRefId>
+        <TradRefId>
+          <UnqTradIdr>U2</UnqTradIdr>
+          <RptgCtrPtyId>RPTGNTTYASDFGHJKID15</RptgCtrPtyId>
+          <OthrCtrPtyId>OID2</OthrCtrPtyId>
+        </TradRefId>
+      </Lnk>
+    </GnlInf>
+    <RptDtls>
+      <EligDt>1900-01-01</EligDt>
+      <RglntInd>E</RglntInd>
+      <CtrPty>
+        <RptgCtrPtyId>RPTGNTTYASDFGHJKID15</RptgCtrPtyId>
+        <CtrPtySd>S</CtrPtySd>
+        <OthrCtrPty>
+          <Id>
+            <LEI>LEIASDCVBGFGRFDXSE27</LEI>
+          </Id>
+        </OthrCtrPty>
+      </CtrPty>
+      <CtrPty>
+        <RptgCtrPtyId>RPTGNTTYASDFGHJKID13</RptgCtrPtyId>
+        <CtrPtySd>B</CtrPtySd>
+        <OthrCtrPty>
+          <Id>
+            <LEI>LEIASDCVBGFGRFDXSE27</LEI>
+          </Id>
+        </OthrCtrPty>
+      </CtrPty>
+      <TxData>
+        <UnqTradIdr>U1</UnqTradIdr>
+      </TxData>
+    </RptDtls>
+    <Sts>
+      <StsCd>Sts1</StsCd>
+      <Rsn>
+        <RsnCd>Rsn1</RsnCd>
+        <RsnTxt>RsnTxt1</RsnTxt>
+      </Rsn>
+    </Sts>
+  </trar.sts.003.02>
+  <trar.sts.003.02>
+    <GnlInf>
+      <RptgNtty>RPTGNTTYASDFGHJKLM18</RptgNtty>
+      <SndrMsgRef>SndrMsgRef1</SndrMsgRef>
+      <ActnTp>1</ActnTp>
+      <Lvl>1</Lvl>
+      <RepTmStmp>1900-01-01T01:01:01+01:00</RepTmStmp>
+      <Lnk>
+        <PrvsSndrMsgRef>PrvsSndrMsgRef3</PrvsSndrMsgRef>
+        <TradRefId>
+          <UnqTradIdr>U1</UnqTradIdr>
+          <RptgCtrPtyId>RPTGNTTYASDFGHJKID18</RptgCtrPtyId>
+          <OthrCtrPtyId>OID1</OthrCtrPtyId>
+        </TradRefId>
+        <TradRefId>
+          <UnqTradIdr>U2</UnqTradIdr>
+          <RptgCtrPtyId>RPTGNTTYASDFGHJKID17</RptgCtrPtyId>
+          <OthrCtrPtyId>OID2</OthrCtrPtyId>
+        </TradRefId>
+      </Lnk>
+    </GnlInf>
+    <RptDtls>
+      <EligDt>1900-01-01</EligDt>
+      <RglntInd>E</RglntInd>
+      <CtrPty>
+        <RptgCtrPtyId>RPTGNTTYASDFGHJKID15</RptgCtrPtyId>
+        <CtrPtySd>S</CtrPtySd>
+        <OthrCtrPty>
+          <Id>
+            <LEI>LEIASDCVBGFGRFDXSE23</LEI>
+          </Id>
+        </OthrCtrPty>
+      </CtrPty>
+      <CtrPty>
+        <RptgCtrPtyId>RPTGNTTYASDFGHJKID15</RptgCtrPtyId>
+        <CtrPtySd>B</CtrPtySd>
+        <OthrCtrPty>
+          <Id>
+            <LEI>LEIASDCVBGFGRFDXSE23</LEI>
+          </Id>
+        </OthrCtrPty>
+      </CtrPty>
+      <TxData>
+        <UnqTradIdr>U1</UnqTradIdr>
       </TxData>
     </RptDtls>
     <Sts>
